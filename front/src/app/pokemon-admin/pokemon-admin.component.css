@@ -1,0 +1,8 @@
+
+h3, td,th,label{
+    color: antiquewhite
+}
+
+.panel{
+    background-image: url("/src/assets/container_bg.png");
+}
