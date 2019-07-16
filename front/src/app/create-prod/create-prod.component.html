@@ -1,0 +1,12 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" class="row">
+    <div class="form-group offset-lg-1 col-lg-5">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="type.name" name="name">
+    </div>
+    <div class="create offset-lg-9">
+      <button type="submit" class="btn btn-success">Créer mon produit</button>
+    </div>
+  </form>
+</div>
+
