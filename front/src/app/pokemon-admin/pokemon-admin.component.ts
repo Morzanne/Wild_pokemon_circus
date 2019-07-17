@@ -29,7 +29,6 @@ export class PokemonAdminComponent implements OnInit {
   }
 
   save() {
-    console.log(this.pokemon.type_id)
     this.http.createPok(this.pokemon)
       .subscribe(data => data);
     this.pokemon = new Pokemon()

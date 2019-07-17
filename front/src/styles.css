@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+	font-family: "Circus";
+	src: url('assets/freak.ttf');
+}
+body{
+    background-image: url("./assets/body_bg.png");
+    font-family: 'Circus';
+    font-size: 135%
+}

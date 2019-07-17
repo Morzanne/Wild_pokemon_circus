@@ -39,6 +39,7 @@ public class PokemonController {
     current.setImage(pokemon.getImage());
 
     Type type = tdao.findById(pokemon.getTypeId()).get();
+    System.out.println(type);
 
     current.setType(type);
 

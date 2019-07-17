@@ -1,5 +1,6 @@
 package com.pwc.poke_circus.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ public class Pokemon {
   private String image;
 
   //@JsonManagedReference
+  @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "type_id")
   private Type type;
