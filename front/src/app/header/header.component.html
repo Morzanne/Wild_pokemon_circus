@@ -1,5 +1,4 @@
 <nav class="navbar navbar-expand-lg navbar-light">
-  <h1>Poke Circus</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,7 +6,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mx-auto row align-items-center justify-content-center">
       <li class="nav-item active m-3">
-        <button class="nav-link" [routerLink]="['/typesnav']">Home <span class="sr-only">(current)</span></button>
+        <button class="nav-link" [routerLink]="['/Home']">Home <span class="sr-only">(current)</span></button>
       </li>
       <li class="nav-item m-3">
         <button class="nav-link" routerLink="/admin-pages">Administration pages</button>
@@ -18,9 +17,9 @@
           Pokemons
         </button>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Fire</a>
-          <a class="dropdown-item" href="#">Grass</a>
-          <a class="dropdown-item" href="#">Water</a>
+          <a class="dropdown-item" [routerLink]="['/pokemon/Fire']">Fire</a>
+          <a class="dropdown-item" [routerLink]="['/pokemon/Grass']">Grass</a>
+          <a class="dropdown-item" [routerLink]="['/pokemon/Water']">Water</a>
         </div>
       </li>
     </ul>

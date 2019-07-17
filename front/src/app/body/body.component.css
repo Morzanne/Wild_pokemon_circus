@@ -1,0 +1,59 @@
+*{
+    text-align: center;
+    color:aliceblue
+}
+h1{
+    text-align: center;
+    color: aliceblue;
+    font-size: 5rem;
+}
+h3{
+    text-align: center;
+    color: aliceblue;
+    font-size: 3rem;
+}
+@keyframes curvedarrow{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
+
+
+#curvedarrow {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-right: 60px solid red;
+    transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    margin-left:97px;
+    animation: curvedarrow 0.7s infinite;
+    
+}
+
+#curvedarrow:after {
+   content: "";
+   position: absolute;
+   border: 0 solid transparent;
+   border-top: 40px solid red;
+   border-radius: 130px 0 0 0;
+   top: -100px;
+   left: -87px;
+   width: 100px;
+   height: 100px;
+   transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+}
+
+.wrap{
+	width:300px;
+	margin:0 auto;
+	padding:30px 10px;
+	text-align:center;
+}
+
