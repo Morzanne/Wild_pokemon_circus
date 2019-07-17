@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <h1>Poke Circus</h1>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav mx-auto row align-items-center justify-content-center">
+      <li class="nav-item active m-3">
+        <button class="nav-link" [routerLink]="['/typesnav']">Home <span class="sr-only">(current)</span></button>
+      </li>
+      <li class="nav-item m-3">
+        <button class="nav-link" routerLink="/admin-pages">Administration pages</button>
+      </li>
+      <li class="nav-item dropdown m-3">
+        <button class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Pokemons
+        </button>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Fire</a>
+          <a class="dropdown-item" href="#">Grass</a>
+          <a class="dropdown-item" href="#">Water</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
