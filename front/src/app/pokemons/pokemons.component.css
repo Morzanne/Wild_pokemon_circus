@@ -1,0 +1,12 @@
+.card {
+    border-width: 5px;
+    border-style: double;
+    border-color: rgba(129, 91, 9, 0.952);
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+.card-body{
+    border-width: 5px;
+    border-color: black;
+
+}

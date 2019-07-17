@@ -7,6 +7,7 @@ import { PokemonAdminComponent } from './pokemon-admin/pokemon-admin.component';
 import { TypeAdminComponent } from './type-admin/type-admin.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { TypesNavComponent } from './types-nav/types-nav.component';
+import { BodyComponent } from './body/body.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,9 @@ const routes: Routes = [
   { path: 'home', component: HeaderComponent },
   { path: "pokemon", component: PokemonsComponent },
   { path: 'pokemon/:type', component: PokemonsComponent },
-  { path: 'typesnav', component: TypesNavComponent }
+  { path: 'typesnav', component: TypesNavComponent },
+  { path: 'Home', component: BodyComponent},
+  { path: '', component: BodyComponent, pathMatch: 'full'}
 
 
 

@@ -13,6 +13,7 @@ import { PokemonAdminComponent } from './pokemon-admin/pokemon-admin.component';
 import { TypeAdminComponent } from './type-admin/type-admin.component';
 import { TypesNavComponent } from './types-nav/types-nav.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PokemonsComponent } from './pokemons/pokemons.component';
     PokemonAdminComponent,
     TypeAdminComponent,
     TypesNavComponent,
-    PokemonsComponent
+    PokemonsComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
