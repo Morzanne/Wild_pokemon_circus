@@ -1,0 +1,22 @@
+button{
+    width: 13rem;
+    background: rgba(245,95,41,1);
+    background: -moz-linear-gradient(-45deg, rgba(245,95,41,1) 0%, rgba(238,122,83,1) 24%, rgba(237,182,18,1) 38%, rgba(227,47,2,1) 92%, rgba(227,47,2,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f55f29', endColorstr='#e32f02', GradientType=1 );
+    color:antiquewhite!important;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: antiquewhite;
+    color: black!important;
+    transition-duration: 0.4s;
+}
+
+.navbar{
+    background-color: rgb(37, 32, 32);
+}
+
+h1{
+    color: antiquewhite
+}
