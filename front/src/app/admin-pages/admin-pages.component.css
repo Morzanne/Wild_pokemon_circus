@@ -1,0 +1,27 @@
+.boutons{
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top:5%;
+    
+}
+
+button{
+    border: rgba(129, 91, 9, 0.952) double 5px;
+    border-radius: 10px;
+    padding : 0.7em;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    font-weight: bold;
+    background-color: aliceblue;
+    cursor: pointer;
+    margin-left: 1%;
+    background: rgba(245,95,41,1);
+    background: -moz-linear-gradient(-45deg, rgba(245,95,41,1) 0%, rgba(238,122,83,1) 24%, rgba(237,182,18,1) 38%, rgba(227,47,2,1) 92%, rgba(227,47,2,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f55f29', endColorstr='#e32f02', GradientType=1 );
+    color:antiquewhite!important;
+    border-radius: 10px;
+}
+
+a{
+    color: antiquewhite;
+}
