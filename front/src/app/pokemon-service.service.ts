@@ -22,7 +22,7 @@ export class PokemonServiceService {
     return this.http.delete("http://localhost:8080/pokemons/"+id);
   }
 
-  updatePok(pokemon:Pokemon):Observable<any>{
-    return this.http.put("http://localhost:8080/pokemons", pokemon)
+  updatePok(id:number, pokemon:Pokemon):Observable<any>{
+    return this.http.put("http://localhost:8080/pokemons/"+id, pokemon)
   }
 }
