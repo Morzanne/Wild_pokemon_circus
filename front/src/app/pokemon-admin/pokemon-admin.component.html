@@ -1,6 +1,6 @@
 <div class="container ajout">
     <h3>Create a POKEMON</h3>
-    <form (ngSubmit)="onSubmit()" class="col-12 mt-5">
+    <form (ngSubmit)="onSubmit()" class="col-12 mt-5" #heroForm="ngForm">
         <div class="form-group col-lg-12 mt-3">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" required [(ngModel)]="pokemon.name" name="name">
@@ -15,6 +15,7 @@
         </div>
         <div class="create">
             <button type="submit" class="btn btn-success">Create my Pokemon</button>
+            <button type="submit" class="btn btn-success" (click)="reUpdate(pokemon)">Modify my Pokemon</button>
         </div>
     </form>
     <div class="panel panel-default mt-5">
@@ -36,7 +37,7 @@
                         <td>{{pro.name}}</td>
                         <td>{{pro.type.name}}</td>
                         <td><img src="{{pro.image}}"/></td>
-                        <td><button class="mr-3" (click)="delete(pro.id)">Supprimer</button><button>Modifier</button>
+                        <td><button class="mr-3" (click)="delete(pro.id)">Supprimer</button><button (click)="update(pro, heroForm)">Modifier</button>
                         </td>
                     </tr>
                 </tbody>
