@@ -34,12 +34,16 @@ export class PokemonAdminComponent implements OnInit {
     this.pokemon = new Pokemon()
   }
 
-  onSubmit(){
-    this.save();
-    this.pokemon = new Pokemon()
+  update(pro, form){
+    console.log(pro)
+    form.controls['name'].setValue(pro.name)
+    form.controls['type'].setValue(pro.type.id)
+    form.controls['image'].setValue(pro.image)
+    
   }
-
-
+  /*reUpdate(pro){
+    this.http.updatePok(pro).subscribe(data=>data);
+  }*/
   delete(id:number){
     this.http.deletePokemon(id).subscribe(
       data=>{
@@ -48,6 +52,8 @@ export class PokemonAdminComponent implements OnInit {
     )
   }
 
-
-
+  onSubmit(){
+    this.save();
+    this.pokemon = new Pokemon()
+  }
 }
