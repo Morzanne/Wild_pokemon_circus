@@ -46,6 +46,17 @@ public class PokemonController {
     return dao.save(current);
   }
 
+  @PutMapping("/pokemons/{id}")
+   public Pokemon update(@PathVariable("id") Long id, @RequestBody PokemonDTO pokemon) throws Exception{
+    Pokemon current = dao.findById(id).get();
+    current.setImage(pokemon.getImage());
+    current.setName(pokemon.getName());
+
+    Type type = tdao.findById(pokemon.getTypeId()).get();
+    current.setType(type);
+    return dao.save(current);
+  }
+
   @DeleteMapping("/pokemons/{id}")
   public boolean delete(@PathVariable("id") Long id){
     dao.deleteById(id);

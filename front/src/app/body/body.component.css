@@ -1,15 +1,15 @@
 *{
     text-align: center;
-    color:aliceblue
+  
 }
-h1{
+h1:not(.firstrow>h1){
     text-align: center;
-    color: aliceblue;
+    color: black;
     font-size: 5rem;
 }
 h3{
     text-align: center;
-    color: aliceblue;
+    color:black;
     font-size: 3rem;
 }
 @keyframes curvedarrow{
@@ -55,5 +55,50 @@ h3{
 	margin:0 auto;
 	padding:30px 10px;
 	text-align:center;
+}
+.first{
+    background-image: url("/assets/bigcircus.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 65rem;
+}
+
+.second{
+    background-color: white;
+    height: 85rem;
+}
+.firstrow{
+    height:65rem;
+    text-align: center;
+    color: antiquewhite!important;
+    font-size: 2rem;
+}
+ h1{
+    font-size: 4rem!important;
+    margin-bottom: 4rem;
+}
+.second{
+    font-size: 2rem;
+}
+
+.firstcard{
+    border: none;
+    border-right: 1px black solid;
+    border-radius: 0px;
+    height: 18rem;
+}
+@media (max-width:758px){
+    .firstcard{
+        border: none
+    }
+}
+
+.cardstheme{
+    margin-top:13rem;
+    margin-bottom: 5rem;
+}
+.card-img-top{
+    height: 18rem;
 }
 
