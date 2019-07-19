@@ -1,6 +1,6 @@
 <div class="container ajout">
     <h3>Create a POKEMON</h3>
-    <!--<form (ngSubmit)="onSubmit()" class="col-12 mt-5" #heroForm="ngForm">
+    <form (ngSubmit)="onSubmit()" class="col-12 mt-5" #heroForm="ngForm">
         <div class="form-group col-lg-12 mt-3">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" required [(ngModel)]="pokemon.name" name="name">
@@ -15,26 +15,10 @@
         </div>
         <div class="create">
             <button type="submit" class="btn btn-success">Create my Pokemon</button>
-            <button type="submit" class="btn btn-success">Modify my Pokemon</button>
         </div>
-    </form>-->
-    <form (ngSubmit)="onSub()" class="col-12 mt-5" #heroFormup="ngForm">
-            <div class="form-group col-lg-12 mt-3">
-                <label for="nameup">Name</label>
-                <input type="text" class="form-control" id="name" required [(ngModel)]="pokemon.name" name="nameup">
-            </div>
-            <div class="form-group col-lg-12 mt-3">
-                <label for="Typeup">Type</label>
-                <input type="text" class="form-control" id="name" required [(ngModel)]="pokemon.typeId" name="typeup">
-            </div>
-            <div class="form-group col-lg-12 mt-3">
-                <label for="Imageup">Image</label>
-                <input type="text" class="form-control" id="name" required [(ngModel)]="pokemon.image" name="imageup">
-            </div>
-            <div class="create">
-                <button type="submit" class="btn btn-success" (click)="reUpdate(pokemon.id, pokemon)">Modify my Pokemon</button>
-            </div>
-        </form>
+    </form>
+</div>
+<div class="container ajout">
     <div class="panel panel-default mt-5">
         <div class="panel-heading">
             <h3>Erase a Pokemon</h3>
@@ -53,12 +37,34 @@
                     <tr *ngFor="let pro of pokes">
                         <td>{{pro.name}}</td>
                         <td>{{pro.type.name}}</td>
-                        <td><img src="{{pro.image}}"/></td>
-                        <td><button class="mr-3" (click)="delete(pro.id)">Supprimer</button><button (click)="update(pro, heroFormup)">Modifier</button>
+                        <td><img src="{{pro.image}}" /></td>
+                        <td><button class="mr-3" (click)="delete(pro.id)">Supprimer</button><button
+                                (click)="update(pro, heroFormup)">Modifier</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+</div>
+
+<div class="container ajout">
+    <h3>Modify a Pokemon</h3>
+    <form (ngSubmit)="onSub()" class="col-12 mt-5" #heroFormup="ngForm">
+        <div class="form-group col-lg-12 mt-3">
+            <label for="nameup">Name</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="pokemon.name" name="nameup">
+        </div>
+        <div class="form-group col-lg-12 mt-3">
+            <label for="Typeup">Type</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="pokemon.typeId" name="typeup">
+        </div>
+        <div class="form-group col-lg-12 mt-3">
+            <label for="Imageup">Image</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="pokemon.image" name="imageup">
+        </div>
+        <div class="create">
+            <button type="submit" class="btn btn-success" (click)="reUpdate(pokemon)">Modify my Pokemon</button>
+        </div>
+    </form>
 </div>
