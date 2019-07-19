@@ -32,7 +32,9 @@ export class PokemonAdminComponent implements OnInit {
 
   save() {
     this.http.createPok(this.pokemon)
-      .subscribe(data => data);
+      .subscribe(data =>{
+        this.refreshTypeList()
+      });
     this.pokemon = new Pokemon()
   }
 
@@ -44,8 +46,11 @@ export class PokemonAdminComponent implements OnInit {
     this.pokIndex2 = this.pokes[this.pokIndex].id
     
   }
-  reUpdate(id, pro){
-    this.http.updatePok(this.pokIndex2, pro).subscribe(data=>data);
+  reUpdate(pro){
+    this.http.updatePok(this.pokIndex2, pro).subscribe(data=>{
+      this.refreshTypeList()
+    });
+    this.pokemon = new Pokemon()
   }
   delete(id:number){
     this.http.deletePokemon(id).subscribe(
